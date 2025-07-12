@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>シス単学習サイト</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="icon" href="https://cdn.glitch.global/5c7b5f11-6db6-4f7c-b099-28af974d1416/favicon.ico?v=1707549817564" />
+</head>
+<body>
+  <header>
+    <span id="show"></span>
+    モード:
+    <label class="langbtn">
+      <input type="checkbox" id="langbtn" />
+      <span id="langbtn_txt">英→日</span>
+    </label>
+    問題数:
+    <label class="number">
+      <input type="number" id="number" class="no-spin" value="100" />
+    </label>
+    単語番号:
+    <span class="fromto">
+      <input type="number" id="from" class="no-spin" value="1" /> ~
+      <input type="number" id="to" class="no-spin" value="2027" />
+    </span>
+    <button onclick="execute()" class="execute">開始</button>
+  </header>
+
+  <div id="field">
+    <div id="main">　</div>
+    <div id="low1">
+      <button id="choice1" class="choices" onclick="btn1()">　</button>
+      <button id="choice2" class="choices" onclick="btn2()">　</button>
+    </div>
+    <div id="low2">
+      <button id="choice3" class="choices" onclick="btn3()">　</button>
+      <button id="choice4" class="choices" onclick="btn4()">　</button>
+    </div>
+    <div id="TorF"></div>
+    <div id="explain"></div>
+    <div id="goresult"></div>
+  </div>
+</body>
+</html>
